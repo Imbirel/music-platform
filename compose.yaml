@@ -1,0 +1,25 @@
+services:
+  backend:
+    image: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    environment:
+      NODE_ENV: production
+      MONGO_URI: mongodb://database:27017/mongodb
+    ports:
+      - '3001:3001'
+
+  database:
+    image: mongo:8
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: mongodb
+    #volumes: 
+    #  - database-data:/data/db
+
+#volumes:
+  #database-data:   
