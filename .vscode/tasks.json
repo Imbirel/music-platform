@@ -6,12 +6,12 @@
       "label": "docker-build",
       "platform": "node",
       "dockerBuild": {
-        "dockerfile": "${workspaceFolder}/backend/Dockerfile",
-        "context": "${workspaceFolder}/backend",
+        "dockerfile": "${workspaceFolder}/frontend/node_modules/define-data-property/Dockerfile",
+        "context": "${workspaceFolder}/frontend/node_modules/define-data-property",
         "pull": true
       },
       "node": {
-        "package": "${workspaceFolder}/backend/package.json"
+        "package": "${workspaceFolder}/frontend/node_modules/define-data-property/package.json"
       }
     },
     {
@@ -22,7 +22,7 @@
       ],
       "platform": "node",
       "node": {
-        "package": "${workspaceFolder}/backend/package.json"
+        "package": "${workspaceFolder}/frontend/node_modules/define-data-property/package.json"
       }
     },
     {
@@ -38,7 +38,7 @@
         }
       },
       "node": {
-        "package": "${workspaceFolder}/backend/package.json",
+        "package": "${workspaceFolder}/frontend/node_modules/define-data-property/package.json",
         "enableDebugging": true
       }
     }

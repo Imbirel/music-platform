@@ -2,10 +2,13 @@ services:
   backend:
     image: backend
     build:
-      context: backend
-      dockerfile: ./Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile
+    depends_on:
+      - database
     environment:
       NODE_ENV: development
+      MONGO_URI: mongodb://database:27017/mongodb
     ports:
       - 3001:3001
       - 9229:9229

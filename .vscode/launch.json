@@ -7,8 +7,8 @@
       "preLaunchTask": "docker-run: debug",
       "platform": "node",
       "node": {
-        "package": "${workspaceFolder}/backend/package.json",
-        "localRoot": "${workspaceFolder}/backend"
+        "package": "${workspaceFolder}/frontend/node_modules/define-data-property/package.json",
+        "localRoot": "${workspaceFolder}/frontend/node_modules/define-data-property"
       }
     }
   ]
